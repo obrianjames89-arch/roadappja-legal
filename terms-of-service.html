@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RoadApp-JA Terms of Service</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  :root {
+    --bg: #F6F3EC;
+    --surface: #FFFFFF;
+    --ink: #20261F;
+    --muted: #6B7A70;
+    --teal: #0F4C46;
+    --teal-dark: #0A332F;
+    --amber: #C97F1E;
+    --amber-bg: #FBF0DE;
+    --brick: #A73824;
+    --brick-bg: #F7E6E1;
+    --hairline: #E4DFD3;
+    --hairline-strong: #D3CBB8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12201B;
+      --surface: #1A2924;
+      --ink: #EAE7DC;
+      --muted: #97A69B;
+      --teal: #5CC2B0;
+      --teal-dark: #3F9285;
+      --amber: #E8A94A;
+      --amber-bg: #2E2417;
+      --brick: #E2705A;
+      --brick-bg: #2E1B18;
+      --hairline: #2A3B34;
+      --hairline-strong: #37493F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12201B;
+    --surface: #1A2924;
+    --ink: #EAE7DC;
+    --muted: #97A69B;
+    --teal: #5CC2B0;
+    --teal-dark: #3F9285;
+    --amber: #E8A94A;
+    --amber-bg: #2E2417;
+    --brick: #E2705A;
+    --brick-bg: #2E1B18;
+    --hairline: #2A3B34;
+    --hairline-strong: #37493F;
+  }
+
+  * { box-sizing: border-box; }
+  html { color-scheme: light dark; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    padding-inline: 20px;
+    padding-block: 48px 96px;
+  }
+  h1, h2, h3 {
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    color: var(--ink);
+    text-wrap: balance;
+    line-height: 1.2;
+  }
+  img { max-width: 100%; }
+  .wrap {
+    max-width: 740px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid var(--hairline-strong);
+    padding-bottom: 28px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+  .brand-mark {
+    width: 22px; height: 22px; border-radius: 6px;
+    background: var(--teal);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--bg); font-family: "Source Serif 4", serif; font-weight: 700; font-size: 13px;
+  }
+  h1.doc-title {
+    font-size: clamp(28px, 5vw, 38px);
+    font-weight: 600;
+    margin: 0;
+  }
+  .doc-meta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .summary {
+    background: var(--amber-bg);
+    border: 1px solid var(--hairline-strong);
+    border-left: 4px solid var(--amber);
+    border-radius: 10px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .summary-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8A5A17;
+  }
+  :root[data-theme="dark"] .summary-label { color: var(--amber); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .summary-label { color: var(--amber); } }
+  .summary ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+  .summary li { color: var(--ink); }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 36px;
+    align-items: start;
+  }
+  @media (max-width: 680px) {
+    .layout { grid-template-columns: 1fr; }
+    nav.toc { display: none; }
+  }
+  nav.toc {
+    position: sticky;
+    top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 13px;
+    border-left: 1px solid var(--hairline);
+    padding-left: 14px;
+  }
+  nav.toc a {
+    color: var(--muted);
+    text-decoration: none;
+    padding-block: 5px;
+    border-bottom: 1px solid transparent;
+  }
+  nav.toc a:hover { color: var(--teal); }
+
+  main { display: flex; flex-direction: column; gap: 34px; min-width: 0; }
+
+  section { display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 20px; }
+  .sec-num {
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--teal);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 21px;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 6px 0 0;
+    color: var(--teal-dark);
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) h3 { color: var(--teal); } }
+  :root[data-theme="dark"] h3 { color: var(--teal); }
+
+  p { margin: 0; max-width: 68ch; }
+  ul, ol { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 7px; max-width: 66ch; }
+
+  .callout {
+    background: var(--brick-bg);
+    border: 1px solid var(--hairline-strong);
+    border-left: 4px solid var(--brick);
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .callout-title {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brick);
+    font-weight: 600;
+  }
+
+  a.inline { color: var(--teal); }
+
+  footer {
+    border-top: 1px solid var(--hairline-strong);
+    padding-top: 22px;
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  footer a { color: var(--teal); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="brand"><span class="brand-mark">R</span> RoadApp-JA</div>
+    <h1 class="doc-title">Terms of Service</h1>
+    <div class="doc-meta">
+      <span>Effective 16 September 2026</span>
+      <span>Applies to the RoadApp-JA mobile app</span>
+    </div>
+  </header>
+
+  <div class="summary">
+    <div class="summary-label">Plain-language summary</div>
+    <ul>
+      <li>RoadApp-JA is a personal organizer — it reminds you about document expiry dates, but it doesn't replace your own responsibility to stay compliant with Jamaican vehicle law.</li>
+      <li>We can't guarantee a reminder notification will always reach you — phone settings, battery optimization, and connectivity can all prevent one from arriving.</li>
+      <li>Automatic document reading (OCR) can misread text — always check what it fills in before saving.</li>
+      <li>Renewal links (TAJ, your insurer) take you to third-party websites we don't control or operate.</li>
+      <li>The app is provided free, "as is," and our liability for any loss is limited as described in Section 7.</li>
+    </ul>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Section navigation">
+      <a href="#accept">1. Acceptance of terms</a>
+      <a href="#service">2. What the service is</a>
+      <a href="#eligibility">3. Eligibility</a>
+      <a href="#account">4. Your account</a>
+      <a href="#use">5. Acceptable use</a>
+      <a href="#disclaimers">6. Important disclaimers</a>
+      <a href="#liability">7. Limitation of liability</a>
+      <a href="#indemnity">8. Indemnification</a>
+      <a href="#termination">9. Termination</a>
+      <a href="#changes">10. Changes</a>
+      <a href="#law">11. Governing law</a>
+      <a href="#contact">12. Contact us</a>
+    </nav>
+
+    <main>
+
+      <section id="accept">
+        <h2><span class="sec-num">1.</span> Acceptance of terms</h2>
+        <p>By creating an account or using RoadApp-JA, you agree to these Terms of Service and to our <a class="inline" href="./privacy-policy.html">Privacy Policy</a>. If you don't agree, please don't use the app.</p>
+      </section>
+
+      <section id="service">
+        <h2><span class="sec-num">2.</span> What the service is</h2>
+        <p>RoadApp-JA is a personal record-keeping and reminder tool for Jamaican vehicle owners. It lets you store details of your vehicle's Registration, Fitness, and Insurance documents, attempts to automatically read details from photos of those documents, and sends reminder notifications as expiry dates approach.</p>
+      </section>
+
+      <section id="eligibility">
+        <h2><span class="sec-num">3.</span> Eligibility</h2>
+        <p>You must be at least 18 years old to create an account, since the app involves storing identity and financial-adjacent documents.</p>
+      </section>
+
+      <section id="account">
+        <h2><span class="sec-num">4.</span> Your account</h2>
+        <p>You're responsible for keeping your password secure and for all activity that happens under your account. You agree to provide accurate information when creating your account and adding vehicles.</p>
+      </section>
+
+      <section id="use">
+        <h2><span class="sec-num">5.</span> Acceptable use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Upload documents that aren't genuinely yours, or that are forged or fraudulent.</li>
+          <li>Use the app to impersonate another person or vehicle owner.</li>
+          <li>Attempt to access another user's account or data.</li>
+          <li>Use the app in any way that violates Jamaican law.</li>
+        </ul>
+      </section>
+
+      <section id="disclaimers">
+        <h2><span class="sec-num">6.</span> Important disclaimers</h2>
+
+        <div class="callout">
+          <div class="callout-title">6.1 Not a substitute for compliance</div>
+          <p>RoadApp-JA is a personal convenience tool only. It does not replace, and is not a substitute for, your own legal responsibility to keep your vehicle's registration, fitness, and insurance current under Jamaican law. You remain solely responsible for knowing and meeting your renewal obligations, whether or not the app reminds you.</p>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">6.2 No guarantee of notification delivery</div>
+          <p>We schedule reminder notifications on your device, but we cannot guarantee they will actually reach you. Phone settings, battery-optimization features, notification permissions, app updates, connectivity, or the app being uninstalled can all prevent a reminder from arriving. Do not rely on the app as your only method of tracking expiry dates.</p>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">6.3 Automatic document reading (OCR) may be inaccurate</div>
+          <p>Text automatically read from your document photos is provided as a convenience and may contain errors. You are responsible for reviewing and correcting every field before saving it.</p>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">6.4 Third-party links</div>
+          <p>Renewal links to the Tax Administration Jamaica (TAJ) website or to insurance companies take you to third-party websites we don't own, control, or operate. We are not responsible for their content, availability, or accuracy.</p>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">6.5 "As is" service</div>
+          <p>The app is provided "as is" and "as available," without warranties of any kind, whether express or implied, including any warranty that it will be uninterrupted, error-free, or fit for a particular purpose.</p>
+        </div>
+      </section>
+
+      <section id="liability">
+        <h2><span class="sec-num">7.</span> Limitation of liability</h2>
+        <p>To the maximum extent permitted by Jamaican law: we are not liable for any indirect, incidental, or consequential loss or damage — including fines, penalties, impoundment costs, or loss of use of your vehicle — arising from your use of, or inability to use, the app, from a missed or undelivered notification, or from inaccurate auto-read document data. Our total liability for any claim relating to the app is limited to the amount you paid to use it, which is currently zero, as the app is provided free of charge.</p>
+      </section>
+
+      <section id="indemnity">
+        <h2><span class="sec-num">8.</span> Indemnification</h2>
+        <p>You agree to indemnify and hold harmless the app's operator from any claim arising from your misuse of the app or your violation of these terms or applicable law.</p>
+      </section>
+
+      <section id="termination">
+        <h2><span class="sec-num">9.</span> Termination</h2>
+        <p>You may stop using the app and request account deletion at any time. We may suspend or terminate an account that violates these terms.</p>
+      </section>
+
+      <section id="changes">
+        <h2><span class="sec-num">10.</span> Changes to these terms</h2>
+        <p>We may update these terms from time to time. If we make material changes, we'll update the effective date above and notify you within the app. Continuing to use the app after a change means you accept the updated terms.</p>
+      </section>
+
+      <section id="law">
+        <h2><span class="sec-num">11.</span> Governing law</h2>
+        <p>These terms are governed by the laws of Jamaica, without regard to conflict-of-law principles.</p>
+      </section>
+
+      <section id="contact">
+        <h2><span class="sec-num">12.</span> Contact us</h2>
+        <p>Questions about these terms: <a class="inline" href="mailto:obrianjames89@gmail.com">obrianjames89@gmail.com</a></p>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <span>RoadApp-JA — Terms of Service — Effective 16 September 2026</span>
+    <span>See also our <a href="./privacy-policy.html">Privacy Policy</a>.</span>
+  </footer>
+
+</div>
+
+</body>
+</html>

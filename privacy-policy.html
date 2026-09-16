@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RoadApp-JA Privacy Policy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  :root {
+    --bg: #F6F3EC;
+    --surface: #FFFFFF;
+    --ink: #20261F;
+    --muted: #6B7A70;
+    --teal: #0F4C46;
+    --teal-dark: #0A332F;
+    --amber: #C97F1E;
+    --amber-bg: #FBF0DE;
+    --brick: #A73824;
+    --brick-bg: #F7E6E1;
+    --hairline: #E4DFD3;
+    --hairline-strong: #D3CBB8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12201B;
+      --surface: #1A2924;
+      --ink: #EAE7DC;
+      --muted: #97A69B;
+      --teal: #5CC2B0;
+      --teal-dark: #3F9285;
+      --amber: #E8A94A;
+      --amber-bg: #2E2417;
+      --brick: #E2705A;
+      --brick-bg: #2E1B18;
+      --hairline: #2A3B34;
+      --hairline-strong: #37493F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12201B;
+    --surface: #1A2924;
+    --ink: #EAE7DC;
+    --muted: #97A69B;
+    --teal: #5CC2B0;
+    --teal-dark: #3F9285;
+    --amber: #E8A94A;
+    --amber-bg: #2E2417;
+    --brick: #E2705A;
+    --brick-bg: #2E1B18;
+    --hairline: #2A3B34;
+    --hairline-strong: #37493F;
+  }
+
+  * { box-sizing: border-box; }
+  html { color-scheme: light dark; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    padding-inline: 20px;
+    padding-block: 48px 96px;
+  }
+  h1, h2, h3 {
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    color: var(--ink);
+    text-wrap: balance;
+    line-height: 1.2;
+  }
+  img { max-width: 100%; }
+  .wrap {
+    max-width: 740px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* ---- Masthead ---- */
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid var(--hairline-strong);
+    padding-bottom: 28px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+  .brand-mark {
+    width: 22px; height: 22px; border-radius: 6px;
+    background: var(--teal);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--bg); font-family: "Source Serif 4", serif; font-weight: 700; font-size: 13px;
+  }
+  h1.doc-title {
+    font-size: clamp(28px, 5vw, 38px);
+    font-weight: 600;
+    margin: 0;
+  }
+  .doc-meta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  /* ---- Summary callout ---- */
+  .summary {
+    background: var(--amber-bg);
+    border: 1px solid var(--hairline-strong);
+    border-left: 4px solid var(--amber);
+    border-radius: 10px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .summary-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8A5A17;
+  }
+  :root[data-theme="dark"] .summary-label { color: var(--amber); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .summary-label { color: var(--amber); } }
+  .summary ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+  .summary li { color: var(--ink); }
+
+  /* ---- Layout: nav + content ---- */
+  .layout {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 36px;
+    align-items: start;
+  }
+  @media (max-width: 680px) {
+    .layout { grid-template-columns: 1fr; }
+    nav.toc { display: none; }
+  }
+  nav.toc {
+    position: sticky;
+    top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 13px;
+    border-left: 1px solid var(--hairline);
+    padding-left: 14px;
+  }
+  nav.toc a {
+    color: var(--muted);
+    text-decoration: none;
+    padding-block: 5px;
+    border-bottom: 1px solid transparent;
+  }
+  nav.toc a:hover { color: var(--teal); }
+
+  main { display: flex; flex-direction: column; gap: 34px; min-width: 0; }
+
+  section { display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 20px; }
+  .sec-num {
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--teal);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 21px;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 6px 0 0;
+    color: var(--teal-dark);
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) h3 { color: var(--teal); } }
+  :root[data-theme="dark"] h3 { color: var(--teal); }
+
+  p { margin: 0; max-width: 68ch; }
+  ul, ol { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 7px; max-width: 66ch; }
+
+  .callout {
+    background: var(--brick-bg);
+    border: 1px solid var(--hairline-strong);
+    border-left: 4px solid var(--brick);
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .callout strong { color: var(--brick); }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+  }
+  .table-wrap { overflow-x: auto; }
+  th, td {
+    text-align: left;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+  }
+  th {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  a.inline { color: var(--teal); }
+
+  footer {
+    border-top: 1px solid var(--hairline-strong);
+    padding-top: 22px;
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  footer a { color: var(--teal); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="brand"><span class="brand-mark">R</span> RoadApp-JA</div>
+    <h1 class="doc-title">Privacy Policy</h1>
+    <div class="doc-meta">
+      <span>Effective 16 September 2026</span>
+      <span>Applies to the RoadApp-JA mobile app</span>
+    </div>
+  </header>
+
+  <div class="summary">
+    <div class="summary-label">Plain-language summary</div>
+    <ul>
+      <li>We store your vehicle and document details (plate, expiry dates, photos of registration/fitness/insurance certificates) so the app can remind you before they lapse.</li>
+      <li>Photos you scan are sent to Google's Vision service to auto-read the text on them — this only happens when you take or upload a photo.</li>
+      <li>Your data is kept in a private database only you can access — we don't sell it, and we don't show it to other users.</li>
+      <li>You can delete a vehicle any time in the app, or email us to delete your whole account and everything in it.</li>
+    </ul>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Section navigation">
+      <a href="#who">1. Who we are</a>
+      <a href="#collect">2. What we collect</a>
+      <a href="#use">3. How we use it</a>
+      <a href="#ocr">4. Automatic document reading</a>
+      <a href="#share">5. Who we share it with</a>
+      <a href="#store">6. Where it's stored</a>
+      <a href="#protect">7. How we protect it</a>
+      <a href="#retain">8. How long we keep it</a>
+      <a href="#rights">9. Your rights</a>
+      <a href="#children">10. Children's privacy</a>
+      <a href="#changes">11. Changes to this policy</a>
+      <a href="#contact">12. Contact us</a>
+    </nav>
+
+    <main>
+
+      <section id="who">
+        <h2><span class="sec-num">1.</span> Who we are</h2>
+        <p>RoadApp-JA is operated by O'Brian James, an individual based in Jamaica, as the developer and data controller for the app. This policy explains what information the app collects, why, and what your rights are over it.</p>
+      </section>
+
+      <section id="collect">
+        <h2><span class="sec-num">2.</span> What information we collect</h2>
+        <h3>2.1 Account information</h3>
+        <p>Your email address and a password. Your password is never stored in readable form — it's one-way hashed by our authentication provider, and not even we can view it.</p>
+        <h3>2.2 Vehicle and document information</h3>
+        <p>Details you enter or that are auto-read from your documents: vehicle nickname, plate number, make, type/model, year, colour, chassis number, owner's name, and — per document — its type (Registration, Fitness, or Insurance), expiry date, certificate number, policy number, and insurance company name.</p>
+        <h3>2.3 Photos and documents</h3>
+        <p>Photos or PDFs of your registration certificate, fitness certificate, insurance certificate, and vehicle photos that you choose to add.</p>
+        <h3>2.4 Usage and diagnostic information</h3>
+        <p>To fix bugs and understand which features are actually used, we log app crashes and a small set of named events: screen views, and when you log in, sign up, add a vehicle, add a document, or attempt automatic document reading. These events never include your password, document photos, or document contents — only that the action happened.</p>
+        <h3>2.5 Device permissions</h3>
+        <p>Camera and photo library access (to scan or upload documents), and notification permission (to remind you before a document expires).</p>
+      </section>
+
+      <section id="use">
+        <h2><span class="sec-num">3.</span> How we use your information</h2>
+        <ul>
+          <li>To create and secure your account.</li>
+          <li>To store your vehicles and documents so you can view them at any time.</li>
+          <li>To send you reminders before a document expires.</li>
+          <li>To pre-fill document details automatically when you scan a document.</li>
+          <li>To diagnose crashes and improve the app.</li>
+        </ul>
+        <p>We do not sell your information, and we do not use it for advertising.</p>
+      </section>
+
+      <section id="ocr">
+        <h2><span class="sec-num">4.</span> Automatic document reading (OCR)</h2>
+        <p>When you scan or upload a photo of a document, that image is sent to Google Cloud's Vision API, which returns the text found in the photo. We use that text to guess values like plate number, expiry date, or policy number and pre-fill them for you. This reading is automated and can make mistakes — you should always check every pre-filled field before saving, and correct anything that's wrong.</p>
+      </section>
+
+      <section id="share">
+        <h2><span class="sec-num">5.</span> Who we share it with</h2>
+        <p>We use a small number of service providers to run the app. Each only receives the specific data it needs to perform its function, and none are permitted to use your data for their own purposes.</p>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Provider</th><th>What it handles</th><th>Why</th></tr>
+            <tr><td>Supabase</td><td>Account login, vehicle/document data, photo storage</td><td>Database, authentication, and file storage</td></tr>
+            <tr><td>Google Cloud Vision</td><td>Photos you scan (at the moment of scanning only)</td><td>Reading text from document photos</td></tr>
+            <tr><td>Resend</td><td>Your email address</td><td>Delivering sign-up confirmation and password-reset codes</td></tr>
+            <tr><td>Sentry</td><td>Crash reports, named usage events (no document content)</td><td>Diagnosing bugs</td></tr>
+          </table>
+        </div>
+        <p>We may also disclose information if required to do so by Jamaican law.</p>
+      </section>
+
+      <section id="store">
+        <h2><span class="sec-num">6.</span> Where your information is stored</h2>
+        <p>Your data is stored on Supabase's infrastructure, hosted in the United States (us-east-1 region). By using the app, you consent to this transfer and storage of your information outside Jamaica.</p>
+      </section>
+
+      <section id="protect">
+        <h2><span class="sec-num">7.</span> How we protect your information</h2>
+        <ul>
+          <li>Database access rules ensure your vehicles and documents are only ever visible to your own account — not to other users, and not browsable by us through the app itself.</li>
+          <li>Passwords are one-way hashed, never stored in plain text.</li>
+          <li>Document photos are kept in a private file store, not publicly accessible.</li>
+          <li>Data is encrypted in transit between the app and our service providers.</li>
+        </ul>
+        <p>No system is perfectly secure, and we can't guarantee absolute security of your information.</p>
+      </section>
+
+      <section id="retain">
+        <h2><span class="sec-num">8.</span> How long we keep your information</h2>
+        <p>We keep your account and its data for as long as your account exists. If you delete a vehicle, its documents and photos are deleted along with it. If you delete your account, all associated data is deleted, other than what we're required to retain by law.</p>
+      </section>
+
+      <section id="rights">
+        <h2><span class="sec-num">9.</span> Your rights</h2>
+        <p>Under Jamaica's Data Protection Act, you have the right to access, correct, and delete your personal data.</p>
+        <ul>
+          <li><strong>Access and correction:</strong> everything the app holds about your vehicles is visible and editable directly in the app.</li>
+          <li><strong>Deleting a vehicle:</strong> available directly in the app, at any time.</li>
+          <li><strong>Deleting your whole account:</strong> email us at the address below and we'll delete your account and all associated data.</li>
+        </ul>
+      </section>
+
+      <section id="children">
+        <h2><span class="sec-num">10.</span> Children's privacy</h2>
+        <p>RoadApp-JA is not intended for anyone under 18. We don't knowingly collect information from children.</p>
+      </section>
+
+      <section id="changes">
+        <h2><span class="sec-num">11.</span> Changes to this policy</h2>
+        <p>If we make material changes to this policy, we'll update the effective date above and notify you within the app.</p>
+      </section>
+
+      <section id="contact">
+        <h2><span class="sec-num">12.</span> Contact us</h2>
+        <p>Questions, or a request to access or delete your data: <a class="inline" href="mailto:obrianjames89@gmail.com">obrianjames89@gmail.com</a></p>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <span>RoadApp-JA — Privacy Policy — Effective 16 September 2026</span>
+    <span>See also our <a href="./terms-of-service.html">Terms of Service</a>.</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
