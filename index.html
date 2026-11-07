@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RoadApp-JA — Legal</title>
+<title>RoadApp-JA — Vehicle document reminders</title>
+<meta name="description" content="RoadApp-JA tracks your vehicle's Registration, Fitness, and Insurance expiry dates and reminds you before they run out.">
+<meta name="apple-itunes-app" content="app-id=6819869792">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
   :root { color-scheme: light dark; --bg:#F6F3EC; --ink:#20261F; --muted:#6B7A70; --teal:#0F4C46; --hairline:#E4DFD3; }
@@ -26,12 +28,24 @@
     color: var(--teal); text-decoration: none; font-weight: 600; font-size: 15px;
   }
   a.doc:hover { border-color: var(--teal); }
+  .icon { width: 96px; height: 96px; border-radius: 22px; margin: 0 auto; }
+  .badge { display: inline-block; margin: 4px auto 0; }
+  .badge img { height: 54px; width: auto; display: block; }
+  .legal-label { margin-top: 18px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
 </style>
 </head>
 <body>
   <div class="card">
+    <img class="icon" src="./assets/app-icon.png" alt="RoadApp-JA app icon">
     <h1>RoadApp-JA</h1>
-    <p>Legal documents for the RoadApp-JA mobile app.</p>
+    <p>Never miss a renewal. RoadApp-JA tracks your vehicle's Registration, Fitness, and Insurance expiry dates and reminds you before they run out. Built for Jamaican drivers.</p>
+    <a class="badge" href="https://apps.apple.com/app/id6819869792">
+      <picture>
+        <source srcset="./assets/app-store-badge-white.svg" media="(prefers-color-scheme: dark)">
+        <img src="./assets/app-store-badge-black.svg" alt="Download on the App Store">
+      </picture>
+    </a>
+    <p class="legal-label">Legal</p>
     <div class="links">
       <a class="doc" href="./privacy-policy.html">Privacy Policy</a>
       <a class="doc" href="./terms-of-service.html">Terms of Service</a>
